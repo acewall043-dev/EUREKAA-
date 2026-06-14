@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Website testing</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <nav class="top-menu">
+
+  <span class="logo">EUREKAA!</span>
+
+  <div class="menu-right">
+
+    <div class="menu-item dropdown">
+      <span class="dropdown-btn" id="course-tab">Courses ▾</span>
+
+      <div class="dropdown-content">
+        <a href="#" id="bio-dropdown-btn">Biology</a>
+        <a href="#" id="chem-dropdown-btn">Chemistry</a>
+        <a href="#" id="phys-dropdown-btn">Physics</a>
+      </div>
+    </div>
+
+    <div class="menu-item dropdown">
+      <span class="dropdown-btn" id="language-tab">Languages ▾</span>
+
+      <div class="dropdown-content">
+        <a href="#" id="en">English</a>
+        <a href="#" id="es">Español</a>
+        <a href="#" id="pt">Português</a>
+        
+        
+      </div>
+    </div>
+
+    <span class="menu-item" id="sign-in">Sign in</span>
+
+  </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <h1 class="main-title">EUREKAA!</h1>
+
+  <h3 class="subtitle-title" id="subtitle-title">
+    Learn Biology, Chemistry and Physics for free!
+  </h3>
+
+</section>
+
+<!-- COURSES -->
+
+<section class="course biology">
+
+  <h2 id="bio-course-title">Biology</h2>
+
+  <h3 id="bio-course-description">
+    Discover life, anatomy, ecosystems, fungi,
+    reproduction, photosynthesis and much more!
+  </h3>
+
+  <a href="#" class="learn-btn" id="bio-learn-btn">
+    Learn more!
+  </a>
+
+</section>
+
+<section class="course chemistry">
+
+  <h2 id="chemistry-course-title">Chemistry</h2>
+
+  <h3 id="chem-course-description">
+    Learn about atoms, elements, pH,
+    solubility, bonding and more!
+  </h3>
+
+  <a href="#" class="learn-btn" id="chem-learn-btn">
+    Learn more!
+  </a>
+
+</section>
+
+<section class="course physics">
+
+  <h2 id="physics-course-title">Physics</h2>
+
+  <h3 id="phys-course-description">
+    Dive into Newton's Laws, energy,
+    momentum, gravity and more!
+  </h3>
+
+  <a href="#" class="learn-btn" id="phys-learn-btn">
+    Learn more!
+  </a>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about-us">
+
+  <h2 id="learn-about-us">Learn About Us</h2>
+
+  <p id="learn-about-us-description-one">
+    Science is everywhere! It connects people,
+    schools, dreams and innovation.
+  </p>
+
+  <p id="learn-about-us-description-two">
+    Our mission is to make science accessible
+    and enjoyable for students worldwide.
+  </p>
+
+</section>
+
+<!-- BIOLOGY OVERLAY -->
+
+<section class="bioCourse">
+
+  <button class="close-btn">✕</button>
+
+  <h2 id="bio-head-title">BIOLOGY</h2>
+
+  <div class="units-grid">
+
+    <!-- UNIT 1 -->
+
+    <div class="unit-card">
+
+      <button class="unit-header" id="bio-u1-title">
+        Unit 1: Introduction to Biology
+        <span class="arrow">▾</span>
+      </button>
+
+      <ul class="unit-content">
+        <li><a href="#" id="bio-u1-c1">What is Biology?</a></li>
+        <li><a href="#" id="bio-u1-c2">Characteristics of Life</a></li>
+        <li><a href="#" id="bio-u1-c3">Taxonomy & classifications</a></li>
+        <li><a href="#" id="bio-u1-c4">The Scientific Method</a></li>
+        <li><a href="#" id="bio-u1-c5">Lab Instruments & safety</a></li>
+        
+      </ul>
+
+    </div>
+
+    <!-- UNIT 2 -->
+
+    <div class="unit-card">
+
+      <button class="unit-header" id="bio-u2-title">
+        Unit 2: Biochemistry
+        <span class="arrow">▾</span>
+      </button>
+
+      <ul class="unit-content">
+        <li><a href="#" id="bio-u2-c1">All is Matter!</a></li>
+        <li><a href="#" id="bio-u2-c2">Water in Biology</a></li>
+        <li><a href="#" id="bio-u2-c3">Organic Atoms, Molecules & Structures</a></li>
+      </ul>
+
+    </div>
+
+    <!-- UNIT 3 -->
+
+    <div class="unit-card">
+
+      <button class="unit-header" id="bio-u3-title">
+        Unit 3: Cells: Structure, Function & Energy
+        <span class="arrow">▾</span>
+      </button>
+
+      <ul class="unit-content">
+        <li><a href="#" id="bio-u3-c1">Cell Structure & Organization</a></li>
+        <li><a href="#" id="bio-u3-c2">Cell Transport & Homeostasis</a></li>
+        <li><a href="#" id="bio-u3-c3">Cellular Energy and Respiration</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CHEMISTRY OVERLAY -->
+
+<section class="chemCourse">
+
+  <button class="close-btn">✕</button>
+
+  <h2 id="chem-head-title">CHEMISTRY</h2>
+
+  <div class="units-grid">
+
+    <!-- UNIT 1 -->
+
+    <div class="unit-card">
+
+      <button class="unit-header" id="chem-u1-title">
+        Unit 1: Introduction to Chemistry
+        <span class="arrow">▾</span>
+      </button>
+
+      <ul class="unit-content">
+        <li><a href="#"id="chem-u1-c1">What is Chemistry?</a></li>
+        <li><a href="#" id="chem-u1-c2">The Scientific Method</a></li>
+        <li><a href="#" id="chem-u1-c3">Lab Tools & Safety</a></li>
+        <li><a href="#" id="chem-u1-c4">SI Units</a></li>
+        
+      </ul>
+
+    </div>
+
+    <!-- UNIT 2 -->
+
+    <div class="unit-card">
+
+      <button class="unit-header" id="chem-u2-title">
+        Unit 2: Matter is Everywhere!
+        <span class="arrow">▾</span>
+      </button>
+
+      <ul class="unit-content">
+        <li><a href="#" id="chem-u2-c1">Matter & Its Properties</a></li>
+        <li><a href="#" id="chem-u2-c2">States of Matter</a></li>
+        <li><a href="#" id="chem-u2-c3">Physical vs Chemical Properties & Changes</a></li>
+        <li><a href="#" id="chem-u2-c4">Atoms, Elements, Atomic Number & Mass</a></li>
+        
+      </ul>
+
+    </div>
+
+    <!-- UNIT 3 -->
+
+    <div class="unit-card">
+
+      <button class="unit-header" id="chem-u3-title">
+        Unit 3: Atomic Models & Charge
+        <span class="arrow">▾</span>
+      </button>
+
+      <ul class="unit-content">
+  <li><a href="#" id="chem-u3-c1">The History of Atomic Models</a></li>
+  <li><a href="#" id="chem-u3-c2">Electron Configuration</a></li>
+  <li><a href="#" id="chem-u3-c3">Valence Electrons</a></li>
+  <li><a href="#" id="chem-u3-c4">The Periodic Table</a></li>
+  <li><a href="#" id="chem-u3-c5">Periodic Trends</a></li>
+  <li><a href="#" id="chem-u3-c6">Electronegativity</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PHYSICS OVERLAY -->
+
+<section class="physCourse">
+
+  <button class="close-btn">✕</button>
+
+  <h2 id="phys-head-title">PHYSICS</h2>
+
+  <div class="units-grid">
+
+    <!-- UNIT 1 -->
+
+    <div class="unit-card">
+
+      <button class="unit-header" id="phys-u1-title">
+        Unit 1: Introduction to Physics
+        <span class="arrow">▾</span>
+      </button>
+
+      <ul class="unit-content">
+        <li><a href="#" id="phys-u1-c1">What is Physics?</a></li>
+        <li><a href="#" id="phys-u1-c2">Scalars vs Vectors</a></li>
+        <li><a href="#" id="phys-u1-c3">Distance, Displacement, Speed, Velocity</a></li>
+        <li><a href="#" id="phys-u1-c4">Acceleration Basics</a></li>
+        <li><a href="#" id="phys-u1-c5">Interpreting Motion Graphs (s–t, v–t)</a></li>
+        
+        
+      </ul>
+
+    </div>
+
+    <!-- UNIT 2 -->
+
+    <div class="unit-card">
+
+      <button class="unit-header" id="phys-u2-title">
+        Unit 2: Forces & Newton's Laws of Motion
+        <span class="arrow">▾</span>
+      </button>
+
+      <ul class="unit-content">
+        <li><a href="#" id="phys-u2-c1">What is a Force?</a></li>
+        <li><a href="#" id="phys-u2-c2">Newton's First Law of Motion</a></li>
+        <li><a href="#" id="phys-u2-c3">Newton's Second Law of Motion</a></li>
+        <li><a href="#" id="phys-u2-c4">Newton's Third Law of Motion</a></li>
+        <li><a href="#" id="phys-u2-c5">Friction, Centripetal Force, Buoyancy, Electromagnetic Forces and Density</a></li>
+        
+        
+      </ul>
+
+    </div>
+
+    <!-- UNIT 3 -->
+
+    <div class="unit-card">
+
+      <button class="unit-header" id="phys-u3-title">
+        Unit 3: Gravity & Motion in Space
+        <span class="arrow">▾</span>
+      </button>
+
+      <ul class="unit-content">
+  <li><a href="#" id="phys-u3-c1">Gravity Basics</a></li>
+  <li><a href="#" id="phys-u3-c2">Orbits & Circular Motion</a></li>
+  <li><a href="#" id="phys-u3-c3">Weight vs Mass</a></li>
+  <li><a href="#" id="phys-u3-c4">Kepler's Laws</a></li>
+  <li><a href="#" id="phys-u3-c5">Projectile Motion</a></li>
+  <li><a href="#" id="phys-u3-c6">The Solar System</a></li>
+  <li><a href="#" id="phys-u3-c7">Space Exploration</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
