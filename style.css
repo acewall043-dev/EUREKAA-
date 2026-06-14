@@ -441,3 +441,20 @@ body {
 .unit-card.active .unit-content {
   max-height: 300px;
 }
+.unit-content a {
+  color: white;
+  text-decoration: none;
+}
+
+.unit-content a:visited {
+  color: white;
+}
+
+.unit-content a:hover {
+  color: #d9d9d9;
+  text-decoration: underline;
+}
+
+.unit-content a:active {
+  color: white;
+}
