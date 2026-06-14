@@ -1,343 +1,443 @@
-<!DOCTYPE html>
-<html lang="en">
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Be+Vietnam+Pro:wght@300;400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Be Vietnam Pro", sans-serif;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+
+.top-menu {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #111;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+  font-family: "Press Start 2P", cursive;
+}
+
+.menu-right {
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+}
+
+.menu-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-btn {
+  display: inline-block;
+  background-color: #222;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.menu-item:hover,
+.dropdown-btn:hover {
+  background-color: #333;
+}
+
+/* ===== DROPDOWN ===== */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: #222;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+  position: relative;
+  height: 85vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+
+  background-image: url("https://i.imgur.com/9fz89Iz.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Website testing</title>
-    <link rel="stylesheet" href="./style.css">
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
 
-  </head>
-    
-  <body>
-  <nav class="top-menu">
+.main-title {
+  font-family: "Press Start 2P", cursive;
+  font-size: 60px;
+}
 
-  <span class="logo">EUREKAA!</span>
+.subtitle-title {
+  font-size: 22px;
+}
 
-  <div class="menu-right">
+/* ===== COURSES ===== */
 
-    <div class="menu-item dropdown">
-      <span class="dropdown-btn" id="course-tab">Courses ▾</span>
+.course {
+  padding: 120px 60px;
+  color: white;
+}
 
-      <div class="dropdown-content">
-        <a href="#" id="bio-dropdown-btn">Biology</a>
-        <a href="#" id="chem-dropdown-btn">Chemistry</a>
-        <a href="#" id="phys-dropdown-btn">Physics</a>
-      </div>
-    </div>
+.biology {
+  background: #2e8b57;
+}
 
-    <div class="menu-item dropdown">
-      <span class="dropdown-btn" id="language-tab">Languages ▾</span>
+.chemistry {
+  background: #d4a017;
+}
 
-      <div class="dropdown-content">
-        <a href="#" id="en">English</a>
-        <a href="#" id="es">Español</a>
-        <a href="#" id="pt">Português</a>
-        
-        
-      </div>
-    </div>
+.physics {
+  background: #b22222;
+}
 
-    <span class="menu-item" id="sign-in">Sign in</span>
+/* ===== BUTTON ===== */
 
-  </div>
+.learn-btn {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 14px 30px;
 
-</nav>
+  background: white;
+  color: black;
 
-<!-- HERO -->
+  text-decoration: none;
 
-<section class="hero">
+  border: 4px solid black;
+  box-shadow: 4px 4px 0 black;
+}
 
-  <h1 class="main-title">EUREKAA!</h1>
+/* ===== ABOUT ===== */
 
-  <h3 class="subtitle-title" id="subtitle-title">
-    Learn Biology, Chemistry and Physics for free!
-  </h3>
+.about-us {
+  padding: 120px 40px;
+  text-align: center;
+  background: #111;
+  color: white;
+}
 
-</section>
+/* ===== BIOLOGY OVERLAY ===== */
 
-<!-- COURSES -->
+.bioCourse {
+  position: fixed;
+  inset: 0;
 
-<section class="course biology">
+  z-index: 9999;
 
-  <h2 id="bio-course-title">Biology</h2>
+  display: none;
 
-  <h3 id="bio-course-description">
-    Discover life, anatomy, ecosystems, fungi,
-    reproduction, photosynthesis and much more!
-  </h3>
+  padding: 60px 40px;
 
-  <a href="#" class="learn-btn" id="bio-learn-btn">
-    Learn more!
-  </a>
+  overflow-y: auto;
 
-</section>
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url("https://i.imgur.com/yZdjKbs_d.webp?maxwidth=760&fidelity=grand");
 
-<section class="course chemistry">
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-  <h2 id="chemistry-course-title">Chemistry</h2>
+.bioCourse.show {
+  display: block;
+}
 
-  <h3 id="chem-course-description">
-    Learn about atoms, elements, pH,
-    solubility, bonding and more!
-  </h3>
+.close-btn {
+  position: absolute;
+  top: 25px;
+  right: 30px;
 
-  <a href="#" class="learn-btn" id="chem-learn-btn">
-    Learn more!
-  </a>
+  width: 50px;
+  height: 50px;
 
-</section>
+  border: none;
+  border-radius: 50%;
 
-<section class="course physics">
+  cursor: pointer;
+}
 
-  <h2 id="physics-course-title">Physics</h2>
+/* ===== GRID ===== */
 
-  <h3 id="phys-course-description">
-    Dive into Newton's Laws, energy,
-    momentum, gravity and more!
-  </h3>
+.units-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
 
-  <a href="#" class="learn-btn" id="phys-learn-btn">
-    Learn more!
-  </a>
+.unit-card {
+  background: rgba(255,255,255,0.08);
 
-</section>
+  border-radius: 20px;
 
-<!-- ABOUT -->
+  overflow: hidden;
 
-<section class="about-us">
+  padding: 10px;
+}
 
-  <h2 id="learn-about-us">Learn About Us</h2>
+.unit-header {
+  width: 100%;
+  padding: 20px;
 
-  <p id="learn-about-us-description-one">
-    Science is everywhere! It connects people,
-    schools, dreams and innovation.
-  </p>
+  background: transparent;
+  border: none;
 
-  <p id="learn-about-us-description-two">
-    Our mission is to make science accessible
-    and enjoyable for students worldwide.
-  </p>
+  color: white;
 
-</section>
+  display: flex;
+  justify-content: space-between;
 
-<!-- BIOLOGY OVERLAY -->
+  cursor: pointer;
+}
 
-<section class="bioCourse">
+.unit-content {
+  list-style: none;
 
-  <button class="close-btn">✕</button>
+  max-height: 0;
+  overflow: hidden;
 
-  <h2 id="bio-head-title">BIOLOGY</h2>
+  transition: max-height 0.4s ease;
+}
 
-  <div class="units-grid">
+.unit-card.active .unit-content {
+  max-height: 300px;
+}
 
-    <!-- UNIT 1 -->
+/* ===== CHEMISTRY OVERLAY ===== */
 
-    <div class="unit-card">
+.chemCourse {
+  position: fixed;
+  inset: 0;
 
-      <button class="unit-header" id="bio-u1-title">
-        Unit 1: Introduction to Biology
-        <span class="arrow">▾</span>
-      </button>
+  z-index: 9999;
 
-      <ul class="unit-content">
-        <li><a href="#" id="bio-u1-c1">What is Biology?</a></li>
-        <li><a href="#" id="bio-u1-c2">Characteristics of Life</a></li>
-        <li><a href="#" id="bio-u1-c3">Taxonomy & classifications</a></li>
-        <li><a href="#" id="bio-u1-c4">The Scientific Method</a></li>
-        <li><a href="#" id="bio-u1-c5">Lab Instruments & safety</a></li>
-        
-      </ul>
+  display: none;
 
-    </div>
+  padding: 60px 40px;
 
-    <!-- UNIT 2 -->
+  overflow-y: auto;
 
-    <div class="unit-card">
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url("https://i.imgur.com/LNt3UHL_d.webp?maxwidth=760&fidelity=grand");
 
-      <button class="unit-header" id="bio-u2-title">
-        Unit 2: Biochemistry
-        <span class="arrow">▾</span>
-      </button>
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-      <ul class="unit-content">
-        <li><a href="#" id="bio-u2-c1">All is Matter!</a></li>
-        <li><a href="#" id="bio-u2-c2">Water in Biology</a></li>
-        <li><a href="#" id="bio-u2-c3">Organic Atoms, Molecules & Structures</a></li>
-      </ul>
+.chemCourse.show {
+  display: block;
+}
 
-    </div>
+.close-btn {
+  position: absolute;
+  top: 25px;
+  right: 30px;
 
-    <!-- UNIT 3 -->
+  width: 50px;
+  height: 50px;
 
-    <div class="unit-card">
+  border: none;
+  border-radius: 50%;
 
-      <button class="unit-header" id="bio-u3-title">
-        Unit 3: Cells: Structure, Function & Energy
-        <span class="arrow">▾</span>
-      </button>
+  cursor: pointer;
 
-      <ul class="unit-content">
-        <li><a href="#" id="bio-u3-c1">Cell Structure & Organization</a></li>
-        <li><a href="#" id="bio-u3-c2">Cell Transport & Homeostasis</a></li>
-        <li><a href="#" id="bio-u3-c3">Cellular Energy and Respiration</a></li>
-      </ul>
+  background: rgba(255,255,255,0.15);
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    </div>
+/* ===== GRID ===== */
 
-  </div>
+.units-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
 
-</section>
+.unit-card {
+  background: rgba(255,255,255,0.08);
 
-<!-- CHEMISTRY OVERLAY -->
+  border-radius: 20px;
 
-<section class="chemCourse">
+  overflow: hidden;
 
-  <button class="close-btn">✕</button>
+  padding: 10px;
+}
 
-  <h2 id="chem-head-title">CHEMISTRY</h2>
+.unit-header {
+  width: 100%;
+  padding: 20px;
 
-  <div class="units-grid">
+  background: transparent;
+  border: none;
 
-    <!-- UNIT 1 -->
+  color: white;
 
-    <div class="unit-card">
+  display: flex;
+  justify-content: space-between;
 
-      <button class="unit-header" id="chem-u1-title">
-        Unit 1: Introduction to Chemistry
-        <span class="arrow">▾</span>
-      </button>
+  cursor: pointer;
+}
 
-      <ul class="unit-content">
-        <li><a href="#"id="chem-u1-c1">What is Chemistry?</a></li>
-        <li><a href="#" id="chem-u1-c2">The Scientific Method</a></li>
-        <li><a href="#" id="chem-u1-c3">Lab Tools & Safety</a></li>
-        <li><a href="#" id="chem-u1-c4">SI Units</a></li>
-        
-      </ul>
+.unit-content {
+  list-style: none;
 
-    </div>
+  max-height: 0;
+  overflow: hidden;
 
-    <!-- UNIT 2 -->
+  transition: max-height 0.4s ease;
+}
 
-    <div class="unit-card">
+.unit-card.active .unit-content {
+  max-height: 300px;
+}
 
-      <button class="unit-header" id="chem-u2-title">
-        Unit 2: Matter is Everywhere!
-        <span class="arrow">▾</span>
-      </button>
 
-      <ul class="unit-content">
-        <li><a href="#" id="chem-u2-c1">Matter & Its Properties</a></li>
-        <li><a href="#" id="chem-u2-c2">States of Matter</a></li>
-        <li><a href="#" id="chem-u2-c3">Physical vs Chemical Properties & Changes</a></li>
-        <li><a href="#" id="chem-u2-c4">Atoms, Elements, Atomic Number & Mass</a></li>
-        
-      </ul>
+/* ===== PHYSICS OVERLAY ===== */
 
-    </div>
+.physCourse {
+  position: fixed;
+  inset: 0;
 
-    <!-- UNIT 3 -->
+  z-index: 9999;
 
-    <div class="unit-card">
+  display: none;
 
-      <button class="unit-header" id="chem-u3-title">
-        Unit 3: Atomic Models & Charge
-        <span class="arrow">▾</span>
-      </button>
+  padding: 60px 40px;
 
-      <ul class="unit-content">
-  <li><a href="#" id="chem-u3-c1">The History of Atomic Models</a></li>
-  <li><a href="#" id="chem-u3-c2">Electron Configuration</a></li>
-  <li><a href="#" id="chem-u3-c3">Valence Electrons</a></li>
-  <li><a href="#" id="chem-u3-c4">The Periodic Table</a></li>
-  <li><a href="#" id="chem-u3-c5">Periodic Trends</a></li>
-  <li><a href="#" id="chem-u3-c6">Electronegativity</a></li>
-      </ul>
+  overflow-y: auto;
 
-    </div>
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url("https://i.imgur.com/OjGmIlV.png");
 
-  </div>
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-</section>
+.physCourse.show {
+  display: block;
+}
 
-<!-- PHYSICS OVERLAY -->
+.close-btn {
+  position: absolute;
+  top: 25px;
+  right: 30px;
 
-<section class="physCourse">
+  width: 50px;
+  height: 50px;
 
-  <button class="close-btn">✕</button>
+  border: none;
+  border-radius: 50%;
 
-  <h2 id="phys-head-title">PHYSICS</h2>
+  cursor: pointer;
 
-  <div class="units-grid">
+  background: rgba(255,255,255,0.15);
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    <!-- UNIT 1 -->
+/* ===== GRID ===== */
 
-    <div class="unit-card">
+.units-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
 
-      <button class="unit-header" id="phys-u1-title">
-        Unit 1: Introduction to Physics
-        <span class="arrow">▾</span>
-      </button>
+.unit-card {
+  background: rgba(255,255,255,0.08);
 
-      <ul class="unit-content">
-        <li><a href="#" id="phys-u1-c1">What is Physics?</a></li>
-        <li><a href="#" id="phys-u1-c2">Scalars vs Vectors</a></li>
-        <li><a href="#" id="phys-u1-c3">Distance, Displacement, Speed, Velocity</a></li>
-        <li><a href="#" id="phys-u1-c4">Acceleration Basics</a></li>
-        <li><a href="#" id="phys-u1-c5">Interpreting Motion Graphs (s–t, v–t)</a></li>
-        
-        
-      </ul>
+  border-radius: 20px;
 
-    </div>
+  overflow: hidden;
 
-    <!-- UNIT 2 -->
+  padding: 10px;
+}
 
-    <div class="unit-card">
+.unit-header {
+  width: 100%;
+  padding: 20px;
 
-      <button class="unit-header" id="phys-u2-title">
-        Unit 2: Forces & Newton's Laws of Motion
-        <span class="arrow">▾</span>
-      </button>
+  background: transparent;
+  border: none;
 
-      <ul class="unit-content">
-        <li><a href="#" id="phys-u2-c1">What is a Force?</a></li>
-        <li><a href="#" id="phys-u2-c2">Newton's First Law of Motion</a></li>
-        <li><a href="#" id="phys-u2-c3">Newton's Second Law of Motion</a></li>
-        <li><a href="#" id="phys-u2-c4">Newton's Third Law of Motion</a></li>
-        <li><a href="#" id="phys-u2-c5">Friction, Centripetal Force, Buoyancy, Electromagnetic Forces and Density</a></li>
-        
-        
-      </ul>
+  color: white;
 
-    </div>
+  display: flex;
+  justify-content: space-between;
 
-    <!-- UNIT 3 -->
+  cursor: pointer;
+}
 
-    <div class="unit-card">
+.unit-content {
+  list-style: none;
 
-      <button class="unit-header" id="phys-u3-title">
-        Unit 3: Gravity & Motion in Space
-        <span class="arrow">▾</span>
-      </button>
+  max-height: 0;
+  overflow: hidden;
 
-      <ul class="unit-content">
-  <li><a href="#" id="phys-u3-c1">Gravity Basics</a></li>
-  <li><a href="#" id="phys-u3-c2">Orbits & Circular Motion</a></li>
-  <li><a href="#" id="phys-u3-c3">Weight vs Mass</a></li>
-  <li><a href="#" id="phys-u3-c4">Kepler's Laws</a></li>
-  <li><a href="#" id="phys-u3-c5">Projectile Motion</a></li>
-  <li><a href="#" id="phys-u3-c6">The Solar System</a></li>
-  <li><a href="#" id="phys-u3-c7">Space Exploration</a></li>
-      </ul>
+  transition: max-height 0.4s ease;
+}
 
-    </div>
-
-  </div>
-
-</section>
-    <script  src="./script.js"></script>
-
-  </body>
-  
-</html>
+.unit-card.active .unit-content {
+  max-height: 300px;
+}
