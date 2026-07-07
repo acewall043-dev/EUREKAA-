@@ -166,6 +166,15 @@ const bioU2C2 =
 const bioU2C3 =
   document.getElementById("bio-u2-c3");
 
+const bioU2C4 =
+  document.getElementById("bio-u2-c4");
+
+const bioU2C5 =
+  document.getElementById("bio-u2-c5");
+
+const bioU2C6 =
+  document.getElementById("bio-u2-c6");
+
 const bioU3Title =
   document.getElementById("bio-u3-title");
 
@@ -177,6 +186,12 @@ const bioU3C2 =
 
 const bioU3C3 =
   document.getElementById("bio-u3-c3");
+
+const bioU3C4 =
+  document.getElementById("bio-u3-c4");
+
+const bioU3C5 =
+  document.getElementById("bio-u3-c5");
 
 const chemU1Title =
   document.getElementById("chem-u1-title");
@@ -192,6 +207,9 @@ const chemU1C3 =
 
 const chemU1C4 =
   document.getElementById("chem-u1-c4");
+
+const chemU1C5 =
+  document.getElementById("chem-u1-c5");
 
 const chemU2Title =
   document.getElementById("chem-u2-title");
@@ -246,6 +264,9 @@ const physU1C4 =
 
 const physU1C5 =
   document.getElementById("phys-u1-c5");
+
+const physU1C6 =
+  document.getElementById("phys-u1-c6");
 
 const physU2Title =
   document.getElementById("phys-u2-title");
@@ -331,15 +352,21 @@ const translations = {
     bioU2C1: "All is Matter!",
     bioU2C2: "Water in Biology",
     bioU2C3: "Organic Atoms, Molecules & Structures",
+    bioU2C4: "ATP & Energy",
+    bioU2C5: "Enzymes & their functions",
+    bioU2C6: "Photosynthesis",
     bioU3Title: "Unit 3: Structure, Function & Energy of Cells",
     bioU3C1: "Cell Structure & Organization",
     bioU3C2: "Cell Transport & Homeostasis",
-    bioU3C3: "Cellular Energy and Respiration",
+    bioU3C3: "Cellular Energy & Respiration",
+    bioU3C4: "Mitosis",
+    bioU3C5: "Meiosis",
     chemU1Title: "Unit 1: Introduction to Chemistry",
     chemU1C1: "What is Chemistry?",
     chemU1C2: "The Scientific Method",
     chemU1C3: "Lab Tools & Safety",
     chemU1C4: "SI Units",
+    chemU1C5: "The Scientific Method",
     chemU2Title: "Unit 2: Matter is Everywhere",
     chemU2C1: "Matter & Its Properties",
     chemU2C2: "States of Matter",
@@ -358,6 +385,7 @@ const translations = {
     physU1C3: "Distance, Displacement, Speed, Velocity",
     physU1C4: "Acceleration Basics",
     physU1C5: "Interpreting Motion Graphs (s–t, v–t)",
+    physU1C6: "The Scientific Method",
     physU2Title: "Unit 2: Forces & Newton's Laws of Motion",
     physU2C1: "What is a Force?",
     physU2C2: "Newton's First Law of Motion",
@@ -411,24 +439,26 @@ const translations = {
     bioU2C1: "Tudo é Matéria!",
     bioU2C2: "A Água na Biologia",
     bioU2C3: "Átomos, Moléculas e Estruturas Orgânicas",
-
+    bioU2C4: "ATP e Energia",
+    bioU2C5: "Enzimas e suas funções",
+    bioU2C6: "Fotossíntese",
     bioU3Title: "Unidade 3: Estrutura, Função e Energia das Células",
     bioU3C1: "Estrutura e Organização Celular",
     bioU3C2: "Transporte Celular e Homeostase",
     bioU3C3: "Energia Celular e Respiração",
-
+    bioU3C4: "Mitose",
+    bioU3C5: "Meiose",
     chemU1Title: "Unidade 1: Introdução à Química",
     chemU1C1: "O que é Química?",
     chemU1C2: "O Método Científico",
     chemU1C3: "Ferramentas de Laboratório e Segurança",
     chemU1C4: "Unidades do SI",
-
+    chemU1C5: "O Método Científico",
     chemU2Title: "Unidade 2: A Matéria Está Por Toda Parte",
     chemU2C1: "Matéria e suas Propriedades",
     chemU2C2: "Os Estados da Matéria",
     chemU2C3: "Propriedades e Transformações Físicas e Químicas",
     chemU2C4: "Átomos, Elementos, Número Atômico e Massa Atômica",
-
     chemU3Title: "Unidade 3: Modelos Atômicos e Carga Elétrica",
     chemU3C1: "A História dos Modelos Atômicos",
     chemU3C2: "Configuração Eletrônica",
@@ -436,14 +466,13 @@ const translations = {
     chemU3C4: "A Tabela Periódica",
     chemU3C5: "Propriedades Periódicas",
     chemU3C6: "Eletronegatividade",
-
     physU1Title: "Unidade 1: Introdução à Física",
     physU1C1: "O que é Física?",
     physU1C2: "Grandezas Escalares e Vetoriais",
     physU1C3: "Distância, Deslocamento, Rapidez e Velocidade",
     physU1C4: "Conceitos Básicos de Aceleração",
     physU1C5: "Interpretação de Gráficos do Movimento (s–t, v–t)",
-
+   physU1C6: "O Método Científico",
    physU2Title: "Unidade 2: Forças e Leis de Newton",
    physU2C1: "O que é Força?",
    physU2C2: "A Primeira Lei de Newton",
@@ -499,18 +528,22 @@ const translations = {
     bioU2C1: "¡Todo es Materia!",
     bioU2C2: "El Agua en la Biología",
     bioU2C3: "Átomos, Moléculas y Estructuras Orgánicas",
-
+    bioU2C4: "ATP y Energía",
+    bioU2C5: "Enzimas y sus funciones",
+    bioU2C6: "Fotosíntesis",
    bioU3Title: "Unidad 3: Estructura, Función y Energía de las Células",
    bioU3C1: "Estructura y Organización Celular",
    bioU3C2: "Transporte Celular y Homeostasis",
    bioU3C3: "Energía Celular y Respiración",
+   bioU3C4: "Mitosis",
+   bioU3C5: "Meiosis",
 
    chemU1Title: "Unidad 1: Introducción a la Química",
    chemU1C1: "¿Qué es la Química?",
    chemU1C2: "El Método Científico",
    chemU1C3: "Herramientas de Laboratorio y Seguridad",
    chemU1C4: "Unidades del SI",
-
+   chemU1C5: "El método científico",
    chemU2Title: "Unidad 2: La Materia Está por Todas Partes",
    chemU2C1: "La Materia y sus Propiedades",
    chemU2C2: "Estados de la Materia",
@@ -531,7 +564,7 @@ const translations = {
    physU1C3: "Distancia, Desplazamiento, Rapidez y Velocidad",
    physU1C4: "Conceptos Básicos de la Aceleración",
    physU1C5: "Interpretación de Gráficas del Movimiento (s–t, v–t)",
-
+   physU1C6: "El método científico",
    physU2Title: "Unidad 2: Fuerzas y Leyes de Newton",
    physU2C1: "¿Qué es 'Fuerza'?",
    physU2C2: "Primera Ley de Newton",
@@ -655,6 +688,15 @@ bioU2C2.textContent =
 
 bioU2C3.textContent =
   translations[language].bioU2C3;
+  
+  bioU2C4.textContent =
+  translations[language].bioU2C4;
+  
+   bioU2C5.textContent =
+  translations[language].bioU2C5;
+  
+   bioU2C6.textContent =
+  translations[language].bioU2C6;
 
 bioU3Title.textContent =
   translations[language].bioU3Title;
@@ -667,6 +709,12 @@ bioU3C2.textContent =
 
 bioU3C3.textContent =
   translations[language].bioU3C3;
+  
+  bioU3C4.textContent =
+  translations[language].bioU3C4;
+  
+  bioU3C5.textContent =
+  translations[language].bioU3C5;
 
 chemU1Title.textContent =
   translations[language].chemU1Title;
@@ -682,6 +730,9 @@ chemU1C3.textContent =
 
 chemU1C4.textContent =
   translations[language].chemU1C4;
+  
+  chemU1C5.textContent =
+  translations[language].chemU1C5;
 
 chemU2Title.textContent =
   translations[language].chemU2Title;
@@ -736,6 +787,9 @@ physU1C4.textContent =
 
 physU1C5.textContent =
   translations[language].physU1C5;
+  
+  physU1C6.textContent =
+  translations[language].physU1C6;
 
 physU2Title.textContent =
   translations[language].physU2Title;
