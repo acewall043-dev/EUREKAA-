@@ -208,9 +208,6 @@ const chemU1C3 =
 const chemU1C4 =
   document.getElementById("chem-u1-c4");
 
-const chemU1C5 =
-  document.getElementById("chem-u1-c5");
-
 const chemU2Title =
   document.getElementById("chem-u2-title");
 
@@ -366,7 +363,6 @@ const translations = {
     chemU1C2: "The Scientific Method",
     chemU1C3: "Lab Tools & Safety",
     chemU1C4: "SI Units",
-    chemU1C5: "The Scientific Method",
     chemU2Title: "Unit 2: Matter is Everywhere",
     chemU2C1: "Matter & Its Properties",
     chemU2C2: "States of Matter",
@@ -453,7 +449,6 @@ const translations = {
     chemU1C2: "O Método Científico",
     chemU1C3: "Ferramentas de Laboratório e Segurança",
     chemU1C4: "Unidades do SI",
-    chemU1C5: "O Método Científico",
     chemU2Title: "Unidade 2: A Matéria Está Por Toda Parte",
     chemU2C1: "Matéria e suas Propriedades",
     chemU2C2: "Os Estados da Matéria",
@@ -543,7 +538,6 @@ const translations = {
    chemU1C2: "El Método Científico",
    chemU1C3: "Herramientas de Laboratorio y Seguridad",
    chemU1C4: "Unidades del SI",
-   chemU1C5: "El método científico",
    chemU2Title: "Unidad 2: La Materia Está por Todas Partes",
    chemU2C1: "La Materia y sus Propiedades",
    chemU2C2: "Estados de la Materia",
@@ -730,9 +724,6 @@ chemU1C3.textContent =
 
 chemU1C4.textContent =
   translations[language].chemU1C4;
-  
-  chemU1C5.textContent =
-  translations[language].chemU1C5;
 
 chemU2Title.textContent =
   translations[language].chemU2Title;
