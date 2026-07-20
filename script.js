@@ -154,6 +154,9 @@ const bioU1C4 =
 const bioU1C5 =
   document.getElementById("bio-u1-c5");
 
+const bioU1C6 =
+  document.getElementById("bio-u1-c6");
+
 const bioU2Title =
   document.getElementById("bio-u2-title");
 
@@ -265,6 +268,12 @@ const physU1C5 =
 const physU1C6 =
   document.getElementById("phys-u1-c6");
 
+const physU1C7 =
+  document.getElementById("phys-u1-c7");
+
+const physU1C8 =
+  document.getElementById("phys-u1-c8");
+
 const physU2Title =
   document.getElementById("phys-u2-title");
 
@@ -344,7 +353,8 @@ const translations = {
     bioU1C2: "Characteristics of Life",
     bioU1C3: "Taxonomy & classifications",
     bioU1C4: "The Scientific Method",
-    bioU1C5: "Lab Instruments & Safety",
+    bioU1C5: "Lab Tools & Safety",
+    bioU1C6: "SI units",
     bioU2Title: "Unit 2: Biochemistry",
     bioU2C1: "All is Matter!",
     bioU2C2: "Water in Biology",
@@ -377,11 +387,13 @@ const translations = {
     chemU3C6: "Electronegativity",
     physU1Title: "Unit 1: Introduction to Physics",
     physU1C1: "What is Physics?",
-    physU1C2: "Scalars vs Vectors",
-    physU1C3: "Distance, Displacement, Speed, Velocity",
-    physU1C4: "Acceleration Basics",
-    physU1C5: "Interpreting Motion Graphs (s–t, v–t)",
-    physU1C6: "The Scientific Method",
+    physU1C2: "The Scientific Method",
+    physU1C3: "Scalars vs Vectors",
+    physU1C4: "Distance, Displacement, Speed & Velocity",
+    physU1C5: "Acceleration Basics",
+    physU1C6: "Interpreting Motion Graphs (s–t, v–t)",
+    physU1C7: "SI units",
+    physU1C8: "Lab Tools & Safety",
     physU2Title: "Unit 2: Forces & Newton's Laws of Motion",
     physU2C1: "What is a Force?",
     physU2C2: "Newton's First Law of Motion",
@@ -430,7 +442,7 @@ const translations = {
     bioU1C3: "Taxonomia e Classificação",
     bioU1C4: "O Método Científico",
     bioU1C5: "Instrumentos de Laboratório e Segurança",
-
+    bioU1C6: "Sistema Internacional de Unidades (SI)",
     bioU2Title: "Unidade 2: Bioquímica",
     bioU2C1: "Tudo é Matéria!",
     bioU2C2: "A Água na Biologia",
@@ -463,18 +475,19 @@ const translations = {
     chemU3C6: "Eletronegatividade",
     physU1Title: "Unidade 1: Introdução à Física",
     physU1C1: "O que é Física?",
-    physU1C2: "Grandezas Escalares e Vetoriais",
-    physU1C3: "Distância, Deslocamento, Rapidez e Velocidade",
-    physU1C4: "Conceitos Básicos de Aceleração",
-    physU1C5: "Interpretação de Gráficos do Movimento (s–t, v–t)",
-   physU1C6: "O Método Científico",
+    physU1C2: "O Método Científico",
+    physU1C3: "Grandezas Escalares e Vetoriais",
+    physU1C4: "Distância, Deslocamento, Rapidez e Velocidade",
+    physU1C5: "Conceitos Básicos de Aceleração",
+   physU1C6: "Interpretação de Gráficos do Movimento (s–t, v–t)",
+   physU1C7: "Sistema Internacional de Unidades (SI)",
+   physU1C8: "Ferramentas de Laboratório e Segurança",
    physU2Title: "Unidade 2: Forças e Leis de Newton",
    physU2C1: "O que é Força?",
    physU2C2: "A Primeira Lei de Newton",
    physU2C3: "A Segunda Lei de Newton",
    physU2C4: "A Terceira Lei de Newton",
    physU2C5: "Atrito, Força Centrípeta, Empuxo, Forças Eletromagnéticas e Densidade",
-
    physU3Title: "Unidade 3: Gravidade e Movimento no Espaço",
    physU3C1: "Fundamentos da Gravidade",
    physU3C2: "Órbitas e Movimento Circular",
@@ -493,7 +506,7 @@ const translations = {
     bioCourseTitle: "Biología",
     chemistryCourseTitle: "Química",
     physicsCourseTitle: "Física",
-    subtitleTitle: "¡Aprende Biología, Química y Física gratis!",
+    subtitleTitle: "¡Aprende biología, química y física gratis!",
     courseTab: "Cursos ▾",
     languageTab: "Idiomas ▾",
     bioDropdownBtn: "Biología",
@@ -512,68 +525,70 @@ const translations = {
     bioHeadTitle: "Biología",
     chemHeadTitle: "Química",
     physHeadTitle: "Física",
-    bioU1Title: "Unidad 1: Introducción a la Biología",
-    bioU1C1: "¿Qué es la Biología?",
-    bioU1C2: "Características de la Vida",
-    bioU1C3: "Taxonomía y Clasificación",
-    bioU1C4: "El Método Científico",
-    bioU1C5: "Instrumentos de Laboratorio y Seguridad",
-
+    bioU1Title: "Unidad 1: Introducción a la biología",
+    bioU1C1: "¿Qué es la biología?",
+    bioU1C2: "Características de la vida",
+    bioU1C3: "Taxonomía y clasificación",
+    bioU1C4: "El método científico",
+    bioU1C5: "Instrumentos de laboratorio y seguridad",
+    bioU1C6: "El Sistema Internacional de Unidades (SI)",
     bioU2Title: "Unidad 2: Bioquímica",
-    bioU2C1: "¡Todo es Materia!",
-    bioU2C2: "El Agua en la Biología",
-    bioU2C3: "Átomos, Moléculas y Estructuras Orgánicas",
-    bioU2C4: "ATP y Energía",
+    bioU2C1: "¡Todo es materia!",
+    bioU2C2: "El agua en la biología",
+    bioU2C3: "Átomos, moléculas y estructuras orgánicas",
+    bioU2C4: "ATP y energía",
     bioU2C5: "Enzimas y sus funciones",
     bioU2C6: "Fotosíntesis",
-   bioU3Title: "Unidad 3: Estructura, Función y Energía de las Células",
-   bioU3C1: "Estructura y Organización Celular",
-   bioU3C2: "Transporte Celular y Homeostasis",
-   bioU3C3: "Energía Celular y Respiración",
+   bioU3Title: "Unidad 3: Estructura, función y energía de las células",
+   bioU3C1: "Estructura y organización celular",
+   bioU3C2: "Transporte celular y homeostasis",
+   bioU3C3: "Energía celular y respiración",
    bioU3C4: "Mitosis",
    bioU3C5: "Meiosis",
 
-   chemU1Title: "Unidad 1: Introducción a la Química",
-   chemU1C1: "¿Qué es la Química?",
-   chemU1C2: "El Método Científico",
-   chemU1C3: "Herramientas de Laboratorio y Seguridad",
+   chemU1Title: "Unidad 1: Introducción a la química",
+   chemU1C1: "¿Qué es la química?",
+   chemU1C2: "El método científico",
+   chemU1C3: "Herramientas de laboratorio y seguridad",
    chemU1C4: "Unidades del SI",
-   chemU2Title: "Unidad 2: La Materia Está por Todas Partes",
-   chemU2C1: "La Materia y sus Propiedades",
-   chemU2C2: "Estados de la Materia",
-   chemU2C3: "Propiedades y Cambios Físicos y Químicos",
-   chemU2C4: "Átomos, Elementos, Número Atómico y Masa Atómica",
+   chemU2Title: "Unidad 2: La materia está por todas partes",
+   chemU2C1: "La materia y sus propiedades",
+   chemU2C2: "Estados de la materia",
+   chemU2C3: "Propiedades y cambios físicos y químicos",
+   chemU2C4: "Átomos, elementos, número atómico y masa atómica",
 
-   chemU3Title: "Unidad 3: Modelos Atómicos y Carga Eléctrica",
-   chemU3C1: "La Historia de los Modelos Atómicos",
-   chemU3C2: "Configuración Electrónica",
-   chemU3C3: "Electrones de Valencia",
-   chemU3C4: "La Tabla Periódica",
-   chemU3C5: "Propiedades Periódicas",
+   chemU3Title: "Unidad 3: Modelos atómicos y carga eléctrica",
+   chemU3C1: "La historia de los modelos atómicos",
+   chemU3C2: "Configuración electrónica",
+   chemU3C3: "Electrones de valencia",
+   chemU3C4: "La tabla periódica",
+   chemU3C5: "Propiedades periódicas",
    chemU3C6: "Electronegatividad",
 
-   physU1Title: "Unidad 1: Introducción a la Física",
-   physU1C1: "¿Qué es la Física?",
-   physU1C2: "Magnitudes Escalares y Vectoriales",
-   physU1C3: "Distancia, Desplazamiento, Rapidez y Velocidad",
-   physU1C4: "Conceptos Básicos de la Aceleración",
-   physU1C5: "Interpretación de Gráficas del Movimiento (s–t, v–t)",
-   physU1C6: "El método científico",
-   physU2Title: "Unidad 2: Fuerzas y Leyes de Newton",
-   physU2C1: "¿Qué es 'Fuerza'?",
-   physU2C2: "Primera Ley de Newton",
-   physU2C3: "Segunda Ley de Newton",
-   physU2C4: "Tercera Ley de Newton",
-   physU2C5: "Fricción, Fuerza Centrípeta, Empuje, Fuerzas Electromagnéticas y Densidad",
+   physU1Title: "Unidad 1: Introducción a la física",
+   physU1C1: "¿Qué es la física?",
+   physU1C2: "El método científico",
+   physU1C3: "Magnitudes escalares y vectoriales",
+   physU1C4: "Distancia, desplazamiento, rapidez y velocidad",
+   physU1C5: "Conceptos básicos de la acceleración",
+   physU1C6: "Interpretación de gráficas de movimiento (s–t, v–t)",
+   physU1C7: "Unidades del SI",
+   physU1C8: "Herramientas de laboratorio y seguridad",
+   physU2Title: "Unidad 2: Fuerzas y leyes de Newton",
+   physU2C1: "¿Qué es 'fuerza'?",
+   physU2C2: "Primera ley de Newton",
+   physU2C3: "Segunda ley de Newton",
+   physU2C4: "Tercera ley de Newton",
+   physU2C5: "Fricción, fuerza centrípeta, empuje, fuerzas Electromagnéticas y densidad",
 
-   physU3Title: "Unidad 3: Gravedad y Movimiento en el Espacio",
-   physU3C1: "Fundamentos de la Gravedad",
-   physU3C2: "Órbitas y Movimiento Circular",
-   physU3C3: "Peso y Masa",
+   physU3Title: "Unidad 3: Gravedad y movimiento en el espacio",
+   physU3C1: "Fundamentos de la gravedad",
+   physU3C2: "Órbitas y movimiento circular",
+   physU3C3: "Peso y masa",
    physU3C4: "Leyes de Kepler",
-   physU3C5: "Movimiento de Proyectiles",
-   physU3C6: "El Sistema Solar",
-   physU3C7: "Exploración Espacial",
+   physU3C5: "Movimiento de proyectiles",
+   physU3C6: "El sistema solar",
+   physU3C7: "Exploración espacial",
 
 
   },
@@ -670,6 +685,9 @@ bioU1C4.textContent =
 
 bioU1C5.textContent =
   translations[language].bioU1C5;
+  
+  bioU1C6.textContent =
+  translations[language].bioU1C6;
 
 bioU2Title.textContent =
   translations[language].bioU2Title;
@@ -781,6 +799,12 @@ physU1C5.textContent =
   
   physU1C6.textContent =
   translations[language].physU1C6;
+  
+  physU1C7.textContent =
+  translations[language].physU1C7;
+  
+  physU1C8.textContent =
+  translations[language].physU1C8;
 
 physU2Title.textContent =
   translations[language].physU2Title;
